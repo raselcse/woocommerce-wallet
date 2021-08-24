@@ -1,0 +1,195 @@
+@font-face{font-family:woowallet;src:url(../fonts/woowallet.eot?tewfy0);src:url(../fonts/woowallet.eot?tewfy0#iefix) format("embedded-opentype"),url(../fonts/woowallet.ttf?tewfy0) format("truetype"),url(../fonts/woowallet.woff?tewfy0) format("woff"),url(../fonts/woowallet.svg?tewfy0#woowallet) format("svg");font-weight:400;font-style:normal}[class*=" woo-wallet-icon-"],[class^=woo-wallet-icon-]{font-family:woowallet!important;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.woo-wallet-icon-wallet:before{content:"\e900"}.woo-wallet-my-wallet-container{max-width:100%;overflow:hidden;border:1px solid #f2f2f2;display:-webkit-box;display:flex}.woo-wallet-my-wallet-container p{margin:0 auto}.woo-wallet-my-wallet-container .woo-wallet-sidebar{width:30%;float:left;background:#f2f2f2;min-height:100px;padding-top:20px}.woo-wallet-my-wallet-container .woo-wallet-content{width:70%;float:left;min-height:100px;padding:20px}.woo-wallet-sidebar ul{margin:0 auto}.woo-wallet-sidebar ul li{list-style:none;margin:20px}.woo-wallet-sidebar ul li span{vertical-align:middle}.woo-wallet-sidebar ul li p{margin:0 auto;line-height:1em}.woo-wallet-sidebar ul li.card{background:#fff;border-radius:2px;text-align:center;position:relative;max-width:100%;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);-webkit-transition:all .3s cubic-bezier(.25,.8,.25,1);transition:all .3s cubic-bezier(.25,.8,.25,1);cursor:pointer}.woo-wallet-sidebar ul li.card a{padding:20px;display:inline-block;width:100%}.woo-wallet-sidebar ul li.card:hover{box-shadow:0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22)}.woo-wallet-sidebar-heading{text-align:center}.woo-wallet-content-h3{float:left;margin:0 0 15px;line-height:1em}.woo-wallet-content .woo-wallet-price{float:right;margin:0 0 15px}.woo-wallet-content-heading{overflow:hidden}.woo-wallet-transactions-items{margin:0 auto}.woo-wallet-transactions-items li{overflow:hidden;padding-bottom:15px}.woo-wallet-transactions-items li div:first-child{float:left;max-width:80%}.woo-wallet-transactions-items li div:last-child{float:right}.woo-wallet-transaction-type-credit{color:#197f36}.woo-wallet-transaction-type-debit{color:#bf0003}.woo-wallet-balance-to-add{width:100%}.woo-add-to-wallet{float:right;margin-top:10px}.woo-wallet-view-more{float:right}.woo-wallet-view-more span{vertical-align:middle}p.woo-wallet-field-container{margin-bottom:11px}.woo-wallet-select2{width:100%}@media (max-width:600px){.woo-wallet-my-wallet-container{display:block}.woo-wallet-my-wallet-container .woo-wallet-sidebar{width:100%}.woo-wallet-my-wallet-container .woo-wallet-content{width:100%}}.on-woo-wallet-cashback{border-color:#6d6d6d;border:1px solid;color:#43454b;padding:.202em .6180469716em;font-size:.875em;text-transform:uppercase;font-weight:600;display:inline-block;margin-bottom:1em;border-radius:3px}.woocommerce-MyAccount-navigation>ul li.woocommerce-MyAccount-navigation-link--woo-wallet a::before{font-family:woowallet!important;content:"\e900"}#wc-wallet-transaction-details.dataTable.dtr-inline.collapsed>tbody>tr[role=row]>td:first-child:before,table.dataTable.dtr-inline.collapsed>tbody>tr[role=row]>th:first-child:before{line-height:19px!important}
+
+a.wpcb-wallet-menu-contents {
+  margin-right: 10px;
+}
+
+a.woocommerce-button.button.refund_request {
+  background-color: #0a0af9;
+}
+
+a.woocommerce-button.button.refund_request_pending{
+  background-color: #a7a7a7;
+  }
+
+a.woocommerce-button.button.refund_request_cancel{
+background-color: #ea2020;
+}
+
+a.woocommerce-button.button.refund_request_accepted{
+  background-color: #6708ad;
+}
+
+a.woocommerce-button.button.refund_request_refunded{
+  background-color: #0c5608;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    position: relative;
+  }
+  
+  /* The Close Button */
+  .modal-content .close {
+    float: right;
+    position: absolute;
+    right: -10px;
+    top: -15px;
+    font-size: 30px;
+    font-weight: bold;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    background: #0b9071;
+    color: #ffffff;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    line-height: 35px;
+  }
+  
+  .modal-content .close:hover,
+  .modal-content .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  input#refund_reason_submit {
+    text-align: center;
+    margin: 0 auto;
+    display: inherit;
+    margin-top: 20px;
+}
+/* hide number arrow at Chrome, Safari, Edge, Opera */
+.modal-content input::-webkit-outer-spin-button,
+.modal-content input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* hide number arrow at  Firefox */
+.modal-content input[type=number] {
+  -moz-appearance: textfield;
+}
+form.request_balance_widrow_form input, 
+form.request_balance_widrow_form select,
+form.request_balance_widrow_form textarea {
+  margin: 15px 5px;
+}
+form.request_balance_widrow_form input[type="number"]{
+  padding: 0 15px;
+  text-align: left;
+}
+
+form.request_balance_widrow_form input[type="number"]::placeholder {  
+                  
+  /* Firefox, Chrome, Opera */ 
+  text-align: left; 
+} 
+
+a#balance_withdrow_button {
+  background-color: #e30883;
+  color: #fff;
+  margin-left: 20px;
+}
+
+.woodmart-my-account-links .site-wallet-transactions-link a:before {
+    content: "\f149";
+    font-family: woodmart-font;
+}
+
+.woodmart-my-account-links .cash-wallet-transactions-link a:before {
+    content: "\f148";
+    font-family: woodmart-font;
+}
+
+
+/*Hidden class for adding and removing*/
+.lds-dual-ring.hidden {
+  display: none;
+}
+
+/*Add an overlay to the entire page blocking any further presses to buttons or other elements.*/
+.overlay {
+  position: absolute;
+  bottom: 45%;
+  left: 45%;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,.8);
+  z-index: 1000;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+/*Spinner Styles*/
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 5% auto;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+
+#fail .error_msg{
+  text-align:center;
+  color:#d75a4a;
+  font-size:18px;
+  font-weight:500;
+}
+#fail img,
+#success img{
+    background-size: 50px 50px;
+    height: 50px;
+}
+
+.modal-content .modal-footer {
+    text-align: center;
+}
+
+.modal-content h4.modal-title{
+    padding:5px 0px;
+}
+div#cash-wallet-transaction_wrapper {
+    margin-top: 24px;
+}
+div#site-wallet-transaction_wrapper {
+    margin-top: 24px;
+}

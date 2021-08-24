@@ -1,0 +1,32 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+ span.status{
+    
+  padding: 5px;
+  border-radius: 5px;
+}
+
+span.successful {
+  background: #00796e;
+  color: #fff;
+}
+span.pending {
+  background: #717171;
+  color: #fff;
+}
+
+span.cancel {
+  background: #dc0505;
+  color: #fff;
+}
+span.accepted {
+  background: #01aa09;
+  color: #fff;
+}
+
+span.refunded {
+  background: #034f8d;
+  color: #fff;
+}

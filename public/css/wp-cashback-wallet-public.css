@@ -1,0 +1,14 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+ span.debit_amount{
+    color:red;
+    font-weight: bold;
+}
+
+span.credit_amount{
+   color:green;
+   font-weight: bold;
+}
